@@ -107,6 +107,8 @@ z-index: 1200;
 display: flex;
 flex-direction: column;
 gap: 20px;
+ background: var(--card-bg);
+ width: 300px;
 }
 .logout .itemsShow button{
      padding: 15px;
@@ -437,6 +439,7 @@ color: #2d3436;
 
 /* Responsive */
 @media (max-width: 768px) {
+ 
     .navbar {
      display: flex;
     justify-content: space-between;
@@ -476,8 +479,14 @@ z-index: 1200;
     .hero-image {
         margin-top: 40px;
     }
-
+.hero-image img{
+    width: 100%;
+}
     .footer-links {
         gap: 30px;
+    }
+    .logout{
+        width: 60%;
+        top: 350px;
     }
 }
