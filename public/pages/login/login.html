@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" href="../../images/loginIcons.png" type="image/x-icon">
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+    <div class="signup-container">
+        <div class="card-items">
+            <span>Sticky Notes Access</span>
+            <h1>Join Sticky , <br> Notes Today</h1>
+<p>Create your account to save your ideas, tasks, and reminders in one place. Sign up now and start adding your notes instantly.</p>
+        </div>
+        <div class="card-items">
+            <h2>Authenticate your</h2>
+<h3>Sticky Note Profile</h3>
+<div class="inputs-itmes">
+    <input type="text"  id="email" placeholder="Email">
+    <input
+    onfocus="showPass(this , 'on')" 
+    onfocusout="showPass(this , 'out')" type="password"  id="password" placeholder="Password">
+    <button onclick="loginUser()">Go To Dashboard</button>
+    <span style="text-align: center; ">Craete  Account <a href="../signUp/signUp.html">SignUp</a></span>
+</div>
+        </div>
+    </div>
+
+        <div class="alertmessages">
+        <div class="showMes">
+            <div class="messages" id="messages">
+                <p id="errorMesg"></p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./login.js"></script>
+</html>

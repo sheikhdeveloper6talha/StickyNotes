@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/8899/8899687.png" 
+    type="image/x-icon">
+    <link rel="stylesheet" href="./dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body onload="profileRender() , renderNotes()">
+  <nav class="navbar">
+        <div class="logo">
+            <span class="logo-m">M</span> Welcome To Dashboard
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../../index.html">Home</a></li>
+            <li><img id="proImg" src="../../images/icons.png" onclick="profile()"></li>
+        </ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- logout container -->
+
+<div class="logout">
+    <div class="items" id="items">
+        <p id="proName">Muhammad Talha Sheikh</p>
+        <button onclick="logOut()">Logout</button>
+    </div>
+</div>
+
+<!-- hero section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Sticky Notes  <br> Dashboard.</h1>
+            <p>Easily organize your thoughts and ideas in one place. Use the form below to quickly add new notes, manage your tasks, and keep everything structured and accessible.</p>
+        </div>
+        <div class="hero-image">
+            <img src="../../images/herosectionImage.png" alt="Illustration">
+        </div>
+    </header>
+
+    <!-- add notes section -->
+
+    <section class="add-Notes">
+<h1>Add Notes</h1>
+<div class="inputs-itmes">
+    <input type="text"  id="title" placeholder="Title">
+    <textarea
+     type="text"  id="des" placeholder="Description"></textarea>
+    <button onclick="addNotes()">Add Notes</button>
+</div>
+    </section>
+
+
+        <div class="alertmessages">
+        <div class="showMes">
+            <div class="messages" id="messages">
+                <p id="errorMesg"></p>
+            </div>
+        </div>
+    </div>
+
+
+    <main class="container" id="container">
+        <h2>Your Notes</h2>
+        <div class="notes-grid" id="notes-grid">
+            
+             </div>
+    </main>
+
+</body>
+<script src="./dashboard.js"></script>
+</html>

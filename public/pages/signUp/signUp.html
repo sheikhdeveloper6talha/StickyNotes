@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="shortcut icon" href="../../images/loginIcons.png" type="image/x-icon">
+    <link rel="stylesheet" href="./singUp.css">
+</head>
+<body>
+    <div class="signup-container">
+        <div class="card-items">
+            <span>Sticky Notes Access</span>
+            <h1>Join Sticky , <br> Notes Today</h1>
+<p>Create your account to save your ideas, tasks, and reminders in one place. Sign up now and start adding your notes instantly.</p>
+        </div>
+        <div class="card-items">
+            <h2>Welcome To</h2>
+<h3>Create Accounts</h3>
+<div class="inputs-itmes">
+    <input type="text"  id="name" placeholder="Name">
+    <input type="text"  id="email" placeholder="Email">
+    <input type="password" onfocus="showPass(this , 'on')"
+    onfocusout="showPass(this , 'out')" id="password" placeholder="Password">
+    <input type="text"  id="images" placeholder="Absoult URL paste">
+    <button onclick="createAccount()">Create Account</button>
+    <span style="text-align: center; ">Already Account <a href="../login/login.html">Login</a></span>
+</div>
+        </div>
+    </div>
+
+    <div class="alertmessages">
+        <div class="showMes">
+            <div class="messages" id="messages">
+                <p id="errorMesg"></p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./singUp.js"></script>
+</html>

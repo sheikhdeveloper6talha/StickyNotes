@@ -1,0 +1,255 @@
+:root {
+    --primary-mint: rgb(57, 139, 160);
+    --hero-bg: #eef7f6;
+    --dark-footer: #2d3436;
+    --text-main: #333;
+    --text-light: #666;
+    --card-bg: #ffffff;
+--btnColor : rgb(57, 139, 160);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9fbfb;
+    color: var(--text-main);
+}
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: var(--hero-bg);
+    position: sticky;
+    top: 0;
+z-index: 1200;
+box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-m {
+    color: var(--primary-mint);
+    font-weight: 900;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+.nav-links img{
+    width: 40px;
+    height: 40px;
+border-radius: 50%;
+object-fit: cover;
+cursor: pointer;
+}
+
+.btn-outline {
+    border: 1.5px solid var(--primary-mint);
+    padding: 8px 18px;
+    border-radius: 20px;
+    color: var(--primary-mint) !important;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* .logout container */
+.logout{
+    position: fixed;
+    top: 100px;
+    right: 0;
+z-index: 1300;
+
+}
+.logout .items{
+    display: none;
+}
+.logout .items.itemsShow{
+    display: block;
+    top: 0;
+    right: 20px;
+    position: absolute;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 20px;
+z-index: 1000;
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+.logout .itemsShow button{
+     padding: 15px;
+    letter-spacing: 5px;
+    border: none;
+    outline: none;
+    font-weight: 700;
+    position: relative;
+    overflow: hidden;
+z-index: 1;
+border-radius: 20px;
+border: 1px solid var(--btnColor);
+background: transparent;
+transition: all 0.9s;
+color: #eef7f6;
+}
+.logout .itemsShow button::after{
+     content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--btnColor);
+    z-index: -1;
+    transition: all 0.9s;
+}
+.logout .itemsShow button:hover::after{
+    width: 0%;
+}
+.logout .itemsShow button:hover {
+        transform: scale(0.9);
+    color: #333;
+}
+
+/* Notes Grid */
+.container {
+    padding: 50px 8%;
+}
+
+.container h2 {
+    margin-bottom: 30px;
+}
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.note-card {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+transition: all 0.3s;
+cursor: pointer;
+}
+.note-card:hover{
+    transform: translateY(-5px);
+}
+.cardnav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+width: 100%;
+align-items: center;
+}
+.cardnav img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.tag {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    border-radius: 15px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.tag-blue {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.tag-orange {
+    background: #fff3e0;
+    color: #f57c00;
+}
+
+.tag-teal {
+    background: #e0f2f1;
+    color: #00796b;
+}
+
+.note-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.note-card p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: var(--hero-bg);
+    position: sticky;
+    top: 0;
+z-index: 1200;
+
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--hero-bg);
+        padding: 20px;
+        
+    }
+
+    .nav-links.active {
+        display: flex;
+    justify-content: flex-start;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+ .logout{
+    top: 150px;
+ }
+ 
+
+}
